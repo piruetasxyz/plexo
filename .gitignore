@@ -1,0 +1,62 @@
+# Apple
+.DS_Store
+
+# For PCBs designed using KiCad: https://www.kicad.org/
+# Format documentation: https://kicad.org/help/file-formats/
+
+# Temporary files
+*.000
+*.bak
+*.bck
+*.kicad_pcb-bak
+*.kicad_sch-bak
+*-backups
+*-cache*
+*-bak
+*-bak*
+*~
+~*
+_autosave-*
+\#auto_saved_files\#
+*.tmp
+*-save.pro
+*-save.kicad_pcb
+fp-info-cache
+~*.lck
+\#auto_saved_files#
+
+# Netlist files (exported from Eeschema)
+*.net
+
+# Autorouter files (exported from Pcbnew)
+*.dsn
+*.ses
+
+# Exported BOM files
+*.xml
+*.csv
+
+# excepto los bom.csv escritos a mano para generar bibliotecas de KiCad
+# con partes-jlcpcb/generar_biblioteca.py (no son exportados por KiCad)
+!bom.csv
+!**/bom.csv
+
+# excepto los csv de las carpetas pcba (bom y cpl para fabricar en JLCPCB)
+!**/pcba/*.csv
+
+# Archived Backups (KiCad 6.0)
+**/*-backups/*.zip
+
+# Local git-based history (KiCad 9.0+)
+.history
+
+# Local project settings
+*.kicad_prl
+
+# Cache de easyeda2kicad (partes-jlcpcb/generar_biblioteca.py --use-cache)
+.easyeda_cache/
+
+# STLs exportados desde modelado-caja/
+*.stl
+# excepto las piezas exportadas de la caja
+!modelado-caja/stl/*.stl
